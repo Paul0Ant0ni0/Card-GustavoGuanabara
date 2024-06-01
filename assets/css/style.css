@@ -1,0 +1,136 @@
+:root {
+    --azul-claro: #02c1c2;
+    --azul-escuro: #2a245e;
+    --amarelo: #f0c808;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../img/gif_bg.gif');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: fill;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.profile-card {
+    background-color: rgba(0, 0, 0, 0.744);
+    width: clamp(300px, 55%, 750px);
+    height: 85%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    border: 1px solid rgb(218, 218, 218);
+    box-shadow: 2px 5px 2px var(--azul-escuro);
+
+    img {
+        object-fit: cover;
+        border-radius: 10px;
+        filter: grayscale(1);
+    }
+
+    #container-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 15px;
+
+        h1 {
+            color: var(--azul-escuro);
+        }
+
+        #description {
+            text-align: justify;
+            margin: 8px 0;
+            color: white;
+        }
+
+        button {
+            background-color: var(--azul-escuro);
+            border: .3px solid var(--azul-escuro);
+            color: white;
+            border-radius: 35px;
+            height: 2.5rem;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        button:active {
+            transform: scale(.8);
+            transition: 8ms;
+        }
+
+    }
+}
+
+.profile-card:hover {
+    box-shadow: 5px 5px 25px var(--azul-claro);
+    transition: 2s;
+    position: absolute;
+    animation: flutuar 3s ease-in-out infinite;
+
+    img {
+        transition: 2s;
+        filter: none;
+    }
+
+    #container-info {
+
+        h1 {
+            color: var(--azul-claro);
+        }
+
+
+        button {
+            border: .5px solid var(--azul-claro);
+            background-color: white;
+            color: var(--azul-claro);
+            font-weight: 600;
+        }
+
+    }
+
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@media only screen and (min-width: 950px) {
+    .profile-card {
+        width: 75%;
+        height: 45%;
+        flex-direction: row;
+        gap: 15px;
+
+        img {
+            width: 35%;
+            
+        }
+    }
+}

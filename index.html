@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuário</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="profile-card">
+        <img src="./assets/img/gustavo_guanabara.jpg" alt="Perfil">
+        <div id="container-info">
+            <h1>Gustavo Guanabara</h1>
+            <p id="description">
+                Gustavo Guanabara é um renomado professor de programação e tecnologia, reconhecido
+                por suas aulas didáticas e acessíveis. Ele é conhecido por seu trabalho em cursos online,
+                especialmente no ensino de linguagens de programação como Python, além de abordar temas
+                relacionados à área de TI. <br> Sua abordagem descontraída e prática torna seus conteúdos populares
+                entre estudantes e profissionais da área.
+            </p>
+            <button onclick="redirectProfile()">Ver Perfil</button>
+        </div>
+
+    </div>
+    <script>
+        const URL_PERFIL = "https://www.cursoemvideo.com/sobre/#:~:text=Gustavo%20Guanabara%20%C3%A9%20professor%20carioca,dist%C3%A2ncia%20de%20uma%20universidade%20p%C3%BAblica.";
+        const redirectProfile = () => {
+            window.open(URL_PERFIL, '_blank');
+        }
+    </script>
+</body>
+
+</html>
